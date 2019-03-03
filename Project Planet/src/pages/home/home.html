@@ -1,0 +1,37 @@
+<ion-content text-center class="bg">
+  <div >
+      <div class="head" text-center>
+          <h1 style="color: ffffff">Project Planet</h1>
+          <h5 style="color: ffffff">Tu app favorita para cuidar el planeta..</h5>
+      </div>
+  </div>
+    <div>
+      <form [formGroup]="formularioRegistro" (ngSubmit) = "saveData()">
+        <ion-list>
+              <div class="inputs">
+             <ion-item>
+               <ion-input  formControlName="nombre" type="text" required placeholder="Nombre"></ion-input>
+             </ion-item>
+         
+             <ion-item>
+               
+               <ion-input formControlName="correo" type="email" required placeholder="Email"></ion-input>
+             </ion-item>
+         
+             <div  class="pass">
+               <ion-item>
+                
+                 <ion-input  formControlName="clave" type="password" required placeholder="Contraseña" ></ion-input>
+               </ion-item>
+             </div>
+             <br>
+             <div>
+               <button ion-button color="secondary" type="submit"block class="button" [disabled]="!formularioRegistro.valid" >Ingresar</button>
+             </div>
+            </div>
+          </ion-list>
+        </form>
+    </div>
+</ion-content>
+
+
